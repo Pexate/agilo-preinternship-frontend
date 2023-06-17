@@ -2,6 +2,7 @@ import { useMobileMenu } from "@lib/context/mobile-menu-context"
 import Hamburger from "@modules/common/components/hamburger"
 import CartDropdown from "@modules/layout/components/cart-dropdown"
 import DropdownMenu from "@modules/layout/components/dropdown-menu"
+import Logo from "@modules/logo"
 import MobileMenu from "@modules/mobile-menu/templates"
 import DesktopSearchModal from "@modules/search/templates/desktop-search-modal"
 import clsx from "clsx"
@@ -72,7 +73,9 @@ const Nav = () => {
 
           <div className="flex items-center h-full">
             <Link href="/">
-              <a className="text-xl-semi uppercase">Acme</a>
+              <a className="text-xl-semi uppercase">
+                <Logo variant={!isScrolled ? "light" : "dark"} />
+              </a>
             </Link>
           </div>
 
