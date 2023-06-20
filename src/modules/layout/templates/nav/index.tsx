@@ -48,7 +48,7 @@ const Nav = () => {
     >
       <header
         className={clsx(
-          "relative h-16 px-8 mx-auto transition-colors bg-transparent border-b border-transparent duration-200 group-hover:bg-white group-hover:border-gray-200",
+          "h-16 px-8 mx-auto transition-colors bg-transparent border-b border-transparent duration-200 group-hover:bg-white group-hover:border-gray-200 relative",
           {
             "!bg-white !border-gray-200": !isHome || isScrolled,
           }
@@ -58,7 +58,7 @@ const Nav = () => {
           className={clsx(
             "text-gray-900 flex items-center justify-between w-full h-full text-small-regular transition-colors duration-200",
             {
-              "text-white group-hover:text-gray-900": isHome && !isScrolled,
+              "group-hover:text-gray-900": isScrolled,
             }
           )}
         >
@@ -74,7 +74,7 @@ const Nav = () => {
           <div className="flex items-center h-full">
             <Link href="/">
               <a className="text-xl-semi uppercase">
-                <Logo variant={!isScrolled ? "light" : "dark"} />
+                <Logo variant={"dark"} />
               </a>
             </Link>
           </div>
