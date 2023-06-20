@@ -14,12 +14,12 @@ const FooterNav = () => {
             <a className="text-xl-semi uppercase">AGILO</a>
           </Link>
         </div>
-        <div className="text-small-regular grid grid-cols-2 gap-x-16">
+        <div className="text-small-regular grid grid-cols-1">
           <div className="flex flex-col gap-y-2">
             <span className="text-base-semi">Collections</span>
             <ul
-              className={clsx("grid grid-cols-1 gap-y-2", {
-                "grid-cols-2": (collections?.length || 0) > 4,
+              className={clsx("grid grid-cols-1 gap-y-2 text-right", {
+                "grid-cols-1": (collections?.length || 0) > 4,
               })}
             >
               {collections?.map((c) => (
@@ -29,38 +29,6 @@ const FooterNav = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-          <div className="flex flex-col gap-y-2">
-            <span className="text-base-semi">Medusa</span>
-            <ul className="grid grid-cols-1 gap-y-2">
-              <li>
-                <a
-                  href="https://github.com/medusajs"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://docs.medusajs.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/medusajs/nextjs-starter-medusa"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Source code
-                </a>
-              </li>
             </ul>
           </div>
         </div>

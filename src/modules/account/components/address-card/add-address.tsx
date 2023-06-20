@@ -86,7 +86,7 @@ const AddAddress: React.FC = () => {
   return (
     <>
       <button
-        className="border border-gray-200 p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
+        className="border border-gray-200 p-5 min-h-[220px] h-full w-full flex flex-col justify-between rounded-3xl"
         onClick={open}
       >
         <span className="text-base-semi">New address</span>
@@ -96,7 +96,7 @@ const AddAddress: React.FC = () => {
       <Modal isOpen={state} close={handleClose}>
         <Modal.Title>Add address</Modal.Title>
         <Modal.Body>
-          <div className="grid grid-cols-1 gap-y-2">
+          <div className="grid grid-cols-1 gap-y-2 mt-4">
             <div className="grid grid-cols-2 gap-x-2">
               <Input
                 label="First name"
