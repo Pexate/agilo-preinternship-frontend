@@ -59,7 +59,7 @@ const RefinementList = ({
                       c.id
                     )}
                     onChange={(e) => handleCollectionChange(e, c.id)}
-                    className="accent-amber-200"
+                    className="accent-amber-600 !rounded-3xl w-4 h-4 bg-amber-50 focus:ring-amber-300 text-amber-500"
                   />
                   {c.title}
                 </label>

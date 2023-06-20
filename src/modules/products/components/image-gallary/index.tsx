@@ -22,12 +22,12 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
 
   return (
     <div className="flex items-start relative">
-      <div className="hidden small:flex flex-col gap-y-4 sticky top-20">
+      <div className="hidden small:flex flex-col gap-y-2 sticky top-20">
         {images.map((image, index) => {
           return (
             <button
               key={image.id}
-              className="h-14 w-12 relative border border-white"
+              className="h-20 w-20 relative border border-white"
               onClick={() => {
                 handleScrollTo(image.id)
               }}
@@ -37,14 +37,14 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 src={image.url}
                 layout="fill"
                 objectFit="cover"
-                className="absolute inset-0"
+                className="absolute inset-0 rounded-xl"
                 alt="Thumbnail"
               />
             </button>
           )
         })}
       </div>
-      <div className="flex flex-col flex-1 small:mx-16 gap-y-4">
+      <div className="flex flex-col flex-1 small:mx-12 gap-y-4">
         {images.map((image, index) => {
           return (
             <div
@@ -58,7 +58,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 layout="fill"
                 objectFit="cover"
                 priority={index <= 2 ? true : false}
-                className="absolute inset-0"
+                className="absolute inset-0 rounded-3xl"
                 alt={`Product image ${index + 1}`}
               />
             </div>
