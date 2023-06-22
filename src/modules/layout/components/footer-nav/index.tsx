@@ -2,6 +2,7 @@ import clsx from "clsx"
 import { useCollections } from "medusa-react"
 import Link from "next/link"
 import CountrySelect from "../country-select"
+import { useState } from "react"
 
 const FooterNav = () => {
   const { collections } = useCollections()
